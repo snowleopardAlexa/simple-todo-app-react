@@ -14,13 +14,14 @@ function Form({ inputText, setInputText, todos, setTodos }) {
         setTodos([
             ...todos, { text: inputText, completed: false, id: Math.random() * 1000},
         ]);
+        // reset state to zero input form
         setInputText("");
     };
 
     return (
         <div>
             <form>
-                <input type="text" className="todo-input" onChange={inputTextHandler} />
+                <input type="text" className="todo-input" onChange={inputTextHandler} value={inputText} />
                 <button className="todo-button" type="submit" onClick={submitTodoHandler}>
                     <i className="fas fa-plus-square"></i>
                 </button>
