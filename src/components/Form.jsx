@@ -13,8 +13,9 @@ function Form({ inputText, setInputText, todos, setTodos }) {
         // spreading todos array
         setTodos([
             ...todos, { text: inputText, completed: false, id: Math.random() * 1000},
-        ])
-    }
+        ]);
+        setInputText("");
+    };
 
     return (
         <div>
