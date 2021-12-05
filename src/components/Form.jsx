@@ -4,7 +4,6 @@ function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
 
     // write JS code and function
     const inputTextHandler = (e) => {
-        console.log(e.target.value);
         setInputText(e.target.value);
     };
     // prevents the page from refreshing 
