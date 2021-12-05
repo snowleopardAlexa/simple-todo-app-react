@@ -20,14 +20,23 @@ function App() {
   const filterHandler = () => {
     switch(status) {
       case "completed":  
-       setFilteredTodos(todos.filter(todo => todo.completed === true))
+       setFilteredTodos(todos.filter((todo) => todo.completed === true))
       break;
     case "uncompleted":
-       setFilteredTodos(todos.filter(todo => todo.completed === true))
+       setFilteredTodos(todos.filter((todo) => todo.completed === true))
       break;  
       default: 
         setFilteredTodos(todos);
       break;
+    }
+  };
+
+  // save to local
+  const saveLocalTodos = () => {
+    if (localStorage.getItem("todos") === null) {
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      localStorage.setItem("todos", JSON.stringify(todos));
     }
   };
 
