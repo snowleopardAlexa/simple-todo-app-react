@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Form({ inputText, setInputText, todos, setTodos }) {
+function Form({ inputText, setInputText, todos, setTodos, setStatus }) {
 
     // write JS code and function
     const inputTextHandler = (e) => {
@@ -19,7 +19,7 @@ function Form({ inputText, setInputText, todos, setTodos }) {
     };
 
     const statusHandler = (e) => {
-        
+        setStatus(e.target.value);
     }
 
     return (
