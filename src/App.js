@@ -40,6 +40,15 @@ function App() {
     }
   };
 
+  // get todos from storage
+  const getLocalTodos = () => {
+    if (localStorage.getItem("todos") === null) {
+      localStorage.setItem("todos", JSON.stringify([]));
+    } else {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
+  };
+
   return (
     <div className="App">
        <header>
